@@ -48,3 +48,23 @@ body {
   opacity: 1;
   transform: translateY(0);
 }
+
+@keyframes borderMove {
+  0% {
+    border-color: #3b82f6; 
+  }
+  50% {
+    border-color: #06b6d4; 
+  }
+  100% {
+    border-color: #3b82f6; 
+  }
+}
+
+.animate-border {
+  animation: borderMove 3s infinite;
+}
+
+.animate-snake-border {
+  border: 2px solid #3b82f6; 
+}

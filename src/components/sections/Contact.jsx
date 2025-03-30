@@ -9,37 +9,35 @@ export const Contact = () => {
     message: "",
   });
 
-  const SERVICE_ID ="service_659olm9";
-  const TEMPLATE_ID = "template_o8nafev";
-  const PUBLIC_KEY = "235qiHVwGLHBtly7Q;"
-
   const handleSubmit = (e) => {
     e.preventDefault();
 
     emailjs
       .sendForm(
-        import.meta.env.VITE_SERVICE_ID,
-        import.meta.env.VITE_TEMPLATE_ID,
+        "service_659olm9", 
+        "template_o8nafev", 
         e.target,
-        import.meta.env.VITE_PUBLIC_KEY
+        "235qiHVwGLHBtly7Q" 
       )
       .then((result) => {
         alert("Message Sent!");
-        setFormData({ name: "", email: "", message: "" });
+        setFormData({ name: "", email: "", message: "" }); 
       })
-      .catch(() => alert("Oops! Something went wrong. Please try again."));
+      .catch((error) => {
+        console.error("EmailJS Error:", error);
+        alert("Oops! Something went wrong. Please try again.");
+      });
   };
 
   return (
     <section
       id="contact"
-      className="min-h-screen flex items-center justify-center py-20"
+      className="min-h-screen flex items-center justify-center py-20 bg-gray-900"
     >
       <RevealOnScroll>
         <div className="px-4 w-full min-w-[300px] md:w-[500px] sm:w-2/3 p-6">
           <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent text-center">
-            {" "}
-            Get In Touch
+            Contact Me
           </h2>
           <form className="space-y-6" onSubmit={handleSubmit}>
             <div className="relative">
