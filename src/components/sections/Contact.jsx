@@ -41,7 +41,7 @@ export const Contact = () => {
       }}
     >
       <RevealOnScroll>
-        <div className="px-4 w-full min-w-[300px] md:w-[500px] sm:w-2/3 p-6 bg-gray-900/80 rounded-lg">
+      <div className="px-4 w-full min-w-[300px] md:w-[500px] sm:w-2/3 p-6 bg-gray-900/80 rounded-lg border-4 border-cyan-500">
           <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-cyan-500 to-cyan-400 bg-clip-text text-transparent text-center ">
             Contact Me
           </h2>
